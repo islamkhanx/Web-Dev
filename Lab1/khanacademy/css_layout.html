@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamkhan's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .box {
+            width: 30%;
+            height: 150px;
+            background-color: #3498db;
+            float: left;
+            margin: 1.66%;
+            text-align: center;
+            line-height: 150px;
+            color: white;
+        }
+        .clear {
+            clear: both;
+        }
+        .position-example {
+            position: relative;
+            height: 200px;
+            background-color: #f1c40f;
+        }
+        .planet {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: #e74c3c;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+        }
+        .overflow-example {
+            width: 200px;
+            height: 100px;
+            background-color: #2ecc71;
+            overflow: scroll;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .event-invite {
+            border: 2px solid #8e44ad;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-text">Welcome to Islamkhan's Website</h1>
+        <p class="center-text">This site is about <span style="color: blue;">HTML</span> and <span style="color: green;">Rust</span>.</p>
+
+        <h2>HTML</h2>
+        <p><span class="highlight">HTML</span> is the standard markup language for creating web pages. Learn more <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">here</a>.</p>
+
+        <h2>Rust</h2>
+        <p><span class="highlight">Rust</span> is a systems programming language focused on safety and performance. Learn more <a href="https://www.rust-lang.org/">here</a>.</p>
+
+        <h2>CSS Layout Examples</h2>
+
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="clear"></div>
+
+        <div class="position-example">
+            <div class="planet">Planet</div>
+        </div>
+
+        <div class="overflow-example">
+            <p>This is an example of overflowing content. You can scroll to see more text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="event-invite">
+            <h3>Event Invitation</h3>
+            <p>You're invited to a special event on <strong>October 31, 2023</strong>!</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Islamkhan's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .center-text {
+            text-align: center;
+        }
+        .highlight {
+            background-color: #f1c40f;
+            padding: 2px 5px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* CSS Layout */
+        .box {
+            width: 30%;
+            height: 150px;
+            background-color: #3498db;
+            float: left;
+            margin: 1.66%;
+            text-align: center;
+            line-height: 150px;
+            color: white;
+        }
+        .clear {
+            clear: both;
+        }
+        .position-example {
+            position: relative;
+            height: 200px;
+            background-color: #f1c40f;
+        }
+        .planet {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: #e74c3c;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+        }
+        .overflow-example {
+            width: 200px;
+            height: 100px;
+            background-color: #2ecc71;
+            overflow: scroll;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .event-invite {
+            border: 2px solid #8e44ad;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        /* Advanced CSS Selectors */
+        /* Multiple Classes */
+        .box.blue {
+            background-color: #2980b9;
+        }
+        .box.green {
+            background-color: #27ae60;
+        }
+
+        /* Combining Class and Element Selectors */
+        p.special {
+            font-style: italic;
+            color: #e67e22;
+        }
+
+        /* Descendant Selectors */
+        .descendant-example p {
+            color: #9b59b6;
+        }
+
+        /* Grouped Selectors */
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+        }
+
+        /* Dynamic Pseudo-classes */
+        a:active {
+            color: #e74c3c;
+        }
+        .box:hover {
+            background-color: #34495e;
+        }
+
+        /* Specificity Example */
+        #specific-example p {
+            color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-text">Welcome to Islamkhan's Website</h1>
+        <p class="center-text">This site is about <span class="highlight">HTML</span> and <span class="highlight">Rust</span>.</p>
+
+        <h2>HTML</h2>
+        <p><span class="highlight">HTML</span> is the standard markup language for creating web pages. Learn more <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">here</a>.</p>
+
+        <h2>Rust</h2>
+        <p><span class="highlight">Rust</span> is a systems programming language focused on safety and performance. Learn more <a href="https://www.rust-lang.org/">here</a>.</p>
+
+        <h2>CSS Layout Examples</h2>
+
+        <div class="box">Box 1</div>
+        <div class="box blue">Box 2</div>
+        <div class="box green">Box 3</div>
+        <div class="clear"></div>
+
+        <div class="position-example">
+            <div class="planet">Planet</div>
+        </div>
+
+        <div class="overflow-example">
+            <p>This is an example of overflowing content. You can scroll to see more text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="event-invite">
+            <h3>Event Invitation</h3>
+            <p>You're invited to a special event on <strong>October 31, 2023</strong>!</p>
+        </div>
+
+        <h2>Advanced CSS Selectors</h2>
+
+        <h3>Multiple Classes</h3>
+        <p class="special">This paragraph uses a combined class and element selector.</p>
+
+        <h3>Descendant Selectors</h3>
+        <div class="descendant-example">
+            <p>This paragraph is styled using a descendant selector.</p>
+        </div>
+
+        <h3>Grouped Selectors</h3>
+        <p>All headings (h1, h2, h3) share the same font family due to grouped selectors.</p>
+
+        <h3>Dynamic Pseudo-classes</h3>
+        <p>Hover over the boxes above to see the hover effect.</p>
+
+        <h3>Specificity Example</h3>
+        <div id="specific-example">
+            <p>This paragraph is styled using an ID selector, which has higher specificity.</p>
+        </div>
+    </div>
+</body>
+</html>
