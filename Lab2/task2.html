@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .phone-preview img {
+            height: 500px;
+            margin-right: 30px;
+        }
+
+        .login-form {
+            width: 350px;
+        }
+
+        form {
+            background: white;
+            border: 1px solid #dbdbdb;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        form h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            background: #fafafa;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 8px;
+            background: #0095f6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #007edc;
+        }
+
+        .or {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .or span {
+            flex: 1;
+            height: 1px;
+            background: #dbdbdb;
+        }
+
+        .or p {
+            margin: 0 10px;
+            color: #8e8e8e;
+            font-weight: bold;
+        }
+
+        .facebook-login {
+            color: #385185;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .forgot-password {
+            color: #00376b;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .signup {
+            background: white;
+            border: 1px solid #dbdbdb;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .signup a {
+            color: #0095f6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .get-app {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .store-links img {
+            width: 140px;
+            height: auto;
+            margin: 5px;
+            object-fit: contain;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="phone-preview">
+            <img src="./static/homepage.png" alt="Instagram preview">
+        </div>
+        <div class="login-form">
+            <form>
+                <h1>Instagram</h1>
+                <input type="text" placeholder="Телефон, имя пользователя или эл. адрес" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit" class="login-btn">Войти</button>
+                <div class="or">
+                    <span></span>
+                    <p>или</p>
+                    <span></span>
+                </div>
+                <a href="#" class="facebook-login">Войти через Facebook</a>
+                <a href="#" class="forgot-password">Забыли пароль?</a>
+            </form>
+            <div class="signup">
+                <p>У вас ещё нет аккаунта? <a href="#">Зарегистрироваться</a></p>
+            </div>
+            <div class="get-app">
+                <p>Установите приложение.</p>
+                <div class="store-links">
+                    <a href="#"><img src="./static/gplay_ico.png" alt="Google Play"></a>
+                    <a href="#"><img src="./static/app_store_ico.png" alt="App Store"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <p>2025 Instagram from Facebook</p>
+        </div>
+    </footer>
+</body>
+</html>
+
