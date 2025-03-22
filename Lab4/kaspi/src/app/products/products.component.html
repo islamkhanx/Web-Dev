@@ -1,0 +1,5 @@
+<div class="product-grid">
+    @for (item of products; track item.url) {
+        <app-item [item]="item"></app-item>
+    }
+</div>
