@@ -1,0 +1,16 @@
+<button>
+    <a routerLink="/albums">Return</a>
+</button>
+
+<div class="album-detail-card">
+    <h1>{{ album().title }}</h1>
+    <h2>Album Details</h2>
+    <label for="albumTitle">Title:</label>
+    <input id="albumTitle"type="text" #titleInput />
+    
+    <button (click)="saveAlbum(titleInput.value)">Save</button>
+    
+    <a [routerLink]="['/albums/', album().id, 'photos']">Photos</a>
+    <router-outlet></router-outlet>
+    
+</div>

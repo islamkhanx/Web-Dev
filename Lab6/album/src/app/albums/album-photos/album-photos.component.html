@@ -1,0 +1,7 @@
+<ul>
+    @for (item of photos(); track $index) {
+      <div class="album-item">
+        <img src="{{ item.thumbnailUrl }}" alt="{{ item.title }}" />
+      </div>
+    }
+  </ul>

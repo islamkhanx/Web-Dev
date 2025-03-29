@@ -1,0 +1,24 @@
+<div class="album-container" [class.has-selection]="isAlbumSelected()">
+  <div class="album-list">
+    <h2>Albums</h2>
+    <ul>
+      @for (item of items(); track $index) {
+        <div class="album-item">
+          <a 
+            [routerLink]="['/albums', item.id]" 
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">
+            {{ item.title }}
+          </a>
+          <button (click)="deleteAlbum(item.id)">Delete</button>
+        </div>
+      }
+    </ul>
+  </div>
+  
+  @if (isAlbumSelected()) {
+    <div class="detail-section">
+      <router-outlet></router-outlet>
+    </div>
+  }
+</div>

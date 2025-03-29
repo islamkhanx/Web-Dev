@@ -1,0 +1,108 @@
+/* Base Styles */
+.album-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* When no album is selected - full width list */
+.album-list {
+  width: 100%;
+  padding: 20px;
+  background-color: #f8f9fa;
+  overflow-y: auto;
+}
+
+/* When album is selected - split view */
+.album-container.has-selection .album-list {
+  width: 350px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.detail-section {
+  flex: 1;
+  padding: 30px;
+  background-color: white;
+  overflow-y: auto;
+}
+
+/* Album List Styles */
+.album-list h2 {
+  margin: 0 0 20px 0;
+  padding-bottom: 15px;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.album-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Album Item Styles */
+.album-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.album-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.album-item a {
+  flex-grow: 1;
+  text-decoration: none;
+  color: #34495e;
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+.album-item a.active {
+  color: #1976d2;
+  font-weight: 600;
+}
+
+/* Delete Button */
+.album-item button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.2s;
+  margin-left: 10px;
+}
+
+.album-item button:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .album-container.has-selection .album-list {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .album-container.has-selection {
+    flex-direction: column;
+  }
+  
+  .detail-section {
+    padding: 20px;
+  }
+}
