@@ -1,0 +1,16 @@
+<div class="product-list-container">
+    <h2>{{ selectedCategory || 'Select a Category' }}</h2>
+    
+    <div class="product-grid">
+      @for (item of products; track item.url) {
+        @if (item.is_active) {
+          <app-product-item
+            [product]="item"
+            (productDeactivated)="handleProductDeactivation($event)"
+            (productLiked)="handleProductLike($event)"
+            class="product-card"
+          ></app-product-item>
+        }
+      }
+    </div>
+  </div>

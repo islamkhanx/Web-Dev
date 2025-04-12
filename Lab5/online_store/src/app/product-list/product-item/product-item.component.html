@@ -1,0 +1,39 @@
+<div class="product-card">
+
+    <div class="product-image">
+      <img [src]="product.image" [alt]="product.item_name">
+      <div class="active-status" [class.active]="product.is_active"></div>
+    </div>
+    
+    <div class="product-content">
+      <h3 class="product-title">{{ product.item_name }}</h3>
+      
+      <p class="product-description">{{ product.description }}</p>
+      
+      <div class="rating-container">
+        <div class="stars">
+            @for (star of [1,2,3,4,5]; track star) {
+              <span class="star">
+                {{ star <= product.rating ? '★' : '☆' }}
+              </span>
+            }
+        </div>
+        <span class="rating-value">({{ product.rating }}/5)</span>
+      </div>
+  
+      <div class="meta-info">
+
+        <div class="likes" (click)="addLike()">
+            <span class="heart">❤️</span>
+            {{ product.likes }}
+        </div>
+
+        <div class="actions">
+            <button class="delete-btn" (click)="deactivateProduct()">
+              Deactivate
+            </button>
+          </div>
+      </div>
+
+    </div>   
+  </div>

@@ -1,0 +1,14 @@
+<div class="categories">
+  <h2>Categories</h2>
+  @for (category of categories; track category) {
+    <button (click)="handleCategorySelect(category)" [class.active]="category === selectedCategory">
+      {{ category }}
+    </button>
+  }
+
+<app-product-list
+  [products]="filteredProducts"
+  [selectedCategory]="selectedCategory"
+  (productDeactivated)="handleProductUpdate($event)"
+  (productLiked)="handleProductUpdate($event)">
+</app-product-list>
