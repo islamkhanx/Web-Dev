@@ -1,0 +1,22 @@
+services:
+  backend:
+    build: hh_back
+    
+    ports:
+      - 8000:8000
+    networks:
+      - islamkhan
+    volumes:
+      - ./hh_back:/app
+  frontend:
+    build: hh_front
+    ports:
+      - 4200:4200
+    networks:
+      - islamkhan
+    volumes:
+      - ./hh_front:/app
+
+networks:
+  islamkhan:
+    driver: bridge

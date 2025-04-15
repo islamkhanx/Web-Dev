@@ -1,0 +1,33 @@
+<div class="form-container">
+    <h2>Create Company</h2>
+
+    <form [formGroup]="companyForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Company Name</label>
+        <input formControlName="name" />
+    </div>
+
+    <div>
+        <label>CompanyDescription</label>
+        <textarea formControlName="description"></textarea>
+    </div>
+
+    <div>
+        <label>city</label>
+        <input formControlName="city"/>
+    </div>
+
+    <div>
+        <label>address</label>
+        <input formControlName="address"/>
+    </div>
+
+    <button type="submit" [disabled]="companyForm.invalid">Create Company</button>
+    </form>
+</div>
+@if (successMessage) {
+    <div style="color: green">{{ successMessage }}</div>
+}
+@if (errorMessage) {
+    <div style="color: red">{{ errorMessage }}</div>
+}

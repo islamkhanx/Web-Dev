@@ -1,0 +1,33 @@
+.form-container form {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .form-container .form-group {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .form-container label {
+    justify-self: end; 
+    padding-right: 1rem;
+    white-space: nowrap;
+  }
+  
+  .form-container input,
+  .form-container textarea,
+  .form-container select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+.form-container select {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2em;
+    padding-right: 2.5rem;
+    cursor: pointer;
+  }

@@ -1,0 +1,38 @@
+<div class="form-container">
+    <h2>Create Vacancy</h2>
+
+    <form [formGroup]="vacancyForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Name:</label>
+        <input formControlName="name" />
+    </div>
+
+    <div>
+        <label>Description:</label>
+        <textarea formControlName="description"></textarea>
+    </div>
+
+    <div>
+        <label>Salary:</label>
+        <input type="number" formControlName="salary" />
+    </div>
+
+    <div>
+        <label>Company:</label>
+        <select formControlName="company">
+            <option value="">-- Select Company --</option>
+            @for(company of companies; track company){
+                <option value="{{ company.id }}">{{ company.name }}</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" [disabled]="vacancyForm.invalid">Create Vacancy</button>
+    </form>
+</div>
+@if (successMessage) {
+    <div style="color: green">{{ successMessage }}</div>
+}
+@if (errorMessage) {
+    <div style="color: red">{{ errorMessage }}</div>
+}

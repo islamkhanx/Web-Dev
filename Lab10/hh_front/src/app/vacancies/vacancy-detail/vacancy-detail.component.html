@@ -1,0 +1,23 @@
+<div class="vacancy-detail">
+    <h2 class="vacancy-title">{{ vacancy.name }}</h2>
+  
+    <div class="vacancy-meta">
+      <span class="salary">💰 {{ vacancy.salary }}</span>
+      <span class="company">🏢 {{ vacancy.company_name }}</span>
+    </div>
+  
+    <p class="vacancy-description">
+      {{ vacancy.description}}
+    </p>
+    <button class="back-button" (click)="goBack()">← Back to Listings</button>
+    <button
+      [ngClass]="editmode ? 'edit-button-active' : 'edit-button'"
+      (click)="toggleEdit()"
+    >
+      {{ editmode ? 'Cancel Edit' : '✏️ Edit' }}
+    </button>
+  </div>
+
+@if (editmode) {
+  <app-vacancy-edit [vacancy]="vacancy"></app-vacancy-edit>
+}

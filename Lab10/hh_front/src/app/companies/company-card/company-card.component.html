@@ -1,0 +1,24 @@
+<div class="company-card">
+    <div class="company-header">
+      <h2 class="company-name">{{ company.name }}</h2>
+      <p class="company-location">{{ company.city }}</p>
+    </div>
+  
+    <div class="company-body">
+      <p class="company-description">{{ company.description }}</p>
+      <p class="company-address"><strong>Address:</strong> {{ company.address }}</p>
+    </div>
+  
+    <div class="company-footer">
+      <a
+        class="view-vacancies-button"
+        [routerLink]="['/companies', company.id, 'vacancies']"
+      >
+        View Vacancies
+      </a>
+      <button class="delete-button" (click)="deleteCompany()">
+        Delete
+      </button>
+    </div>
+  </div>
+  

@@ -1,0 +1,15 @@
+<div class="vacancy-card">
+  <div class="card-header">
+    <h3>{{ vacancy.name }}</h3>
+    <span class="salary">${{ vacancy.salary }}</span>
+  </div>
+
+  <div class="card-body">
+    <p class="company">Company: {{ vacancy.company_name }}</p>
+  </div>
+
+  <div class="card-footer">
+    <a [routerLink]="['/vacancies', vacancy.id]" class="view-button">View Details</a>
+    <button class="delete-button" (click)="deleteVacancy()">Delete Vacancy</button>
+  </div>
+</div>

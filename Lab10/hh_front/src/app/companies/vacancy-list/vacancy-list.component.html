@@ -1,0 +1,6 @@
+<div class="vacancies-container">
+    @for (vacancy of vacancies; track vacancy) {
+      <app-vacancy-card [vacancy]="vacancy" (deleteVacancyEE)="handleDeleteVacancy($event)"></app-vacancy-card>
+    }
+</div>
+  

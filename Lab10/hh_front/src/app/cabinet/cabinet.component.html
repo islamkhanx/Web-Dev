@@ -1,0 +1,13 @@
+<div class="cabinet-container">
+    <h1>Cabinet</h1>
+  
+    <div class="cabinet-nav">
+      <a [routerLink]="['create-company']" class="cabinet-button">Create Company</a>
+      <a [routerLink]="['create-vacancy']" class="cabinet-button">Create Vacancy</a>
+    </div>
+  
+    <div class="cabinet-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
