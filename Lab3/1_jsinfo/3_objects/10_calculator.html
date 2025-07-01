@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Calculator</title>
+    <script>
+        function Calculator() {
+            this.read = function() {
+                this.a = +prompt("Enter the first value:", "");
+                this.b = +prompt("Enter the second value:", "");
+            };
+            this.sum = function() {
+                return this.a + this.b;
+            };
+            this.mul = function() {
+                return this.a * this.b;
+            };
+        }
+
+        let calculator = new Calculator();
+        calculator.read();
+        alert("Sum=" + calculator.sum());
+        alert("Mul=" + calculator.mul());
+    </script>
+</head>
+<body>
+    <h1>Check the alerts for the calculator results!</h1>
+</body>
+</html>

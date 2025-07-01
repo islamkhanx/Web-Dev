@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Else Required</title>
+    <script>
+        function checkAge(age) {
+            if (age > 18) {
+                return true;
+            }
+            return confirm('Did parents allow you?');
+        }
+
+        alert(checkAge(20));
+        alert(checkAge(15));
+    </script>
+</head>
+<body>
+    <h1>Check the alerts for the function result!</h1>
+</body>
+</html>

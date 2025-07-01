@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewrite Function</title>
+    <script>
+
+        function checkAge1(age) {
+            return age > 18 ? true : confirm('Did parents allow you?');
+        }
+
+        function checkAge2(age) {
+            return age > 18 || confirm('Did parents allow you?');
+        }
+
+        alert(checkAge1(20));
+        alert(checkAge1(15));
+        alert(checkAge2(20));
+        alert(checkAge2(15));
+    </script>
+</head>
+<body>
+    <h1>Check the alerts for the function results!</h1>
+</body>
+</html>

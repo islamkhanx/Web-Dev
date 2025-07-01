@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Accumulator</title>
+    <script>
+        function Accumulator(startingValue) {
+            this.value = startingValue;
+            this.read = function() {
+                this.value += +prompt("Enter a number:", "");
+            };
+        }
+
+        let accumulator = new Accumulator(1);
+        accumulator.read();
+        accumulator.read();
+        alert(accumulator.value);
+    </script>
+</head>
+<body>
+    <h1>Check the alert for the accumulator result!</h1>
+</body>
+</html>

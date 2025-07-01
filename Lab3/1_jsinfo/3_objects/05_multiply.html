@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiply Numeric Properties</title>
+    <script>
+        function multiplyNumeric(obj) {
+            for (let key in obj) {
+                if (typeof obj[key] === 'number') {
+                    obj[key] *= 2;
+                }
+            }
+        }
+
+        let menu = {
+            width: 200,
+            height: 300,
+            title: "My menu"
+        };
+
+        multiplyNumeric(menu);
+        console.log(menu);
+    </script>
+</head>
+<body>
+    <h1>Check the console for the modified object!</h1>
+</body>
+</html>

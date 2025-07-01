@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Login</title>
+    <script>
+        let login = prompt('Enter your login', '');
+
+        if (login === 'Admin') {
+            let password = prompt('Enter your password', '');
+            if (password === 'TheMaster') {
+                alert('Welcome!');
+            } else if (password === '' || password === null) {
+                alert('Canceled');
+            } else {
+                alert('Wrong password');
+            }
+        } else if (login === '' || login === null) {
+            alert('Canceled');
+        } else {
+            alert("I don't know you");
+        }
+    </script>
+</head>
+<body>
+    <h1>Check the prompts and alerts for login and password!</h1>
+</body>
+</html>

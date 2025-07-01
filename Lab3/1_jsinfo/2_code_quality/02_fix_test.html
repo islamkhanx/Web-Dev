@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fix Test</title>
+    <script>
+        function pow(x, n) {
+            let result = 1;
+            for (let i = 0; i < n; i++) {
+                result *= x;
+            }
+            return result;
+        }
+
+        function testPow() {
+            let x = 5;
+            assert.equal(pow(x, 1), x);
+            assert.equal(pow(x, 2), x * x);
+            assert.equal(pow(x, 3), x * x * x);
+        }
+
+        function assertEqual(actual, expected) {
+            if (actual !== expected) {
+                console.error(`Test failed: expected ${expected}, but got ${actual}`);
+            } else {
+                console.log(`Test passed: ${actual} === ${expected}`);
+            }
+        }
+
+        testPow();
+    </script>
+</head>
+<body>
+    <h1>Check the console for the test results!</h1>
+</body>
+</html>
